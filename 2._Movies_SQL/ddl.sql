@@ -1,0 +1,21 @@
+SHOW TABLES;
+
+CREATE TABLE IF NOT EXISTS movies (
+    title VARCHAR(3000) NOT NULL
+);
+
+ALTER TABLE movies ADD COLUMN year YEAR NOT NULL AFTER title;
+
+ALTER TABLE movies DROP COLUMN year;
+
+ALTER TABLE movies MODIFY year INT(4);
+
+
+DROP TABLE movies;
+
+# DATABASES,TABLES,COLUMNS vs. DATA (in ROWS)
+# DDL                      vs. DML
+# CRUD
+
+
+
