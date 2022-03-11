@@ -14,6 +14,32 @@ CREATE TABLE IF NOT EXISTS directors (
     FOREIGN KEY (movie_id) REFERENCES movies(id)
 );
 
+CREATE TABLE IF NOT EXISTS actors (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS movies_actors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    actor_id INT,
+    FOREIGN KEY (movie_id) REFERENCES movies(id),
+    FOREIGN KEY (actor_id) REFERENCES actors(id)
+);
+
+CREATE TABLE IF NOT EXISTS production_teams (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    team_name VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS movies_production_teams (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    movie_id INT,
+    production_team_id INT,
+    FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+    FOREIGN KEY (production_team_id) REFERENCES production_teams(id) ON DELETE CASCADE
+);
+
 
 
 ALTER TABLE movies ADD COLUMN year YEAR NOT NULL AFTER title;
