@@ -6,7 +6,7 @@
 
 ##### Smallest title
 
-This is for normal text 
+This is for cool text 
 
 *Italic*
 
