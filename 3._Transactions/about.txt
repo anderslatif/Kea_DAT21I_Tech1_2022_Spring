@@ -1,0 +1,5 @@
+- DDL. Creating and Managing Database Objects
+- DML. Querying and Manipulating Data
+- DCL. Users and Privileges
+- TCL. Transactions
+
