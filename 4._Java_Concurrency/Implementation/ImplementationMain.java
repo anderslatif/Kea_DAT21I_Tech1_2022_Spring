@@ -1,7 +1,6 @@
-import Implementation.ImplementRunnable;
-import Implementation.ImplementThread;
+package Implementation;
 
-public class Main {
+public class ImplementationMain {
     public static void main(String[] args) {
         ImplementThread threadFromThreadOne = new ImplementThread();
         ImplementThread threadFromThreadTwo = new ImplementThread();
