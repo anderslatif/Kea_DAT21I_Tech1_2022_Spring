@@ -17,6 +17,20 @@
         </a>
     </nav>
 
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.getName()}"></td>
+                <td th:text="${product.getPrice()}"></td>
+                <td th:text="${product.getStock()}"></td>
+            </tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
